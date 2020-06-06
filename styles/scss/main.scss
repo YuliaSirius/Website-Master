@@ -40,9 +40,11 @@
 /* wr-main (секция на флексах)*/
 .wr-main {
   position: relative;
-  background: linear-gradient(360deg,
+  background: linear-gradient(
+      360deg,
       rgba(33, 54, 74, 0.76) 10.28%,
-      rgba(0, 0, 0, 0) 62.39%),
+      rgba(0, 0, 0, 0) 62.39%
+    ),
     url(../../img/bg_main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,7 +62,6 @@ header {
 
     ul {
       display: flex;
-
       li {
         margin-right: 34px;
       }
@@ -70,7 +71,7 @@ header {
       font-family: Circebold;
       font-size: 24px;
       line-height: 35px;
-      color: #FFFFFF;
+      color: #ffffff;
       text-decoration: none;
     }
   }
@@ -87,7 +88,7 @@ header {
       font-size: 16px;
       line-height: 16px;
       text-align: right;
-      color: #B1B1B1;
+      color: #b1b1b1;
     }
 
     a {
@@ -95,13 +96,11 @@ header {
       font-weight: 800;
       font-size: 32px;
       line-height: 47px;
-      color: #FFFFFF;
+      color: #ffffff;
       text-decoration: none;
     }
   }
-
 }
-
 
 .wr-main::before {
   content: '';
@@ -198,7 +197,7 @@ header {
     }
   }
 
-  >span {
+  > span {
     font-family: Circeregular;
     font-size: 20px;
     color: #ffffff;
@@ -299,7 +298,7 @@ header {
   justify-content: space-between;
   padding: 0 132px;
 
-  >img {
+  > img {
     padding-top: 10px;
   }
 
@@ -344,7 +343,7 @@ header {
 .jobs {
   display: grid;
   grid-template-columns: 413px 407px 408px 403px;
-  grid-template-rows: repeat(2, 353px);
+  grid-template-rows: repeat(2, 1fr);
   gap: 50px;
   padding: 0 55px 327px 55px;
 
@@ -352,7 +351,7 @@ header {
     width: 100%;
   }
 
-  >div {
+  > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -366,23 +365,23 @@ header {
       align-items: center;
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, #3E7594, #3E7594), #C4C4C4;
+      background: linear-gradient(0deg, #3e7594, #3e7594), #c4c4c4;
     }
 
     p {
       font-family: Circeregular;
       font-size: 24px;
       line-height: 23px;
-      color: #FFFFFF;
+      color: #ffffff;
       border-left: 4px solid #fba500;
       white-space: pre-line;
       padding-left: 24px;
+      margin: 15px 0;
     }
   }
 
-  >div:hover {
+  > div:hover {
     transform: scale(1.1);
-
   }
 }
 
@@ -425,9 +424,13 @@ header {
   grid-row: 2/3;
   grid-column: 4/5;
 }
-
+@media all and (max-width: 1900px) {
+  /* wr-jobs */
+  .jobs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media all and (max-width: 1700px) {
-
   /* wr-main */
   .wr-main header {
     padding: 20px 10px;
@@ -443,7 +446,6 @@ header {
 }
 
 @media all and (max-width: 1500px) {
-
   /* wr-main */
   .wr-main {
     header {
@@ -475,7 +477,13 @@ header {
   /* wr-procedure */
   .wr-procedure {
     padding: 0 70px;
+  }
 
+  /* wr-jobs */
+  .jobs > div p {
+    border-left: none;
+    padding-left: 0;
+    margin: 10px 0;
   }
 }
 
@@ -504,7 +512,6 @@ header {
     height: 40px;
     font-size: 18px;
     margin-right: 25px;
-
   }
 
   .submit div a {
@@ -516,7 +523,6 @@ header {
     font-size: 22px;
     line-height: 30px;
   }
-
 
   .plumbery {
     display: block;
@@ -539,7 +545,6 @@ header {
 
   .response .prompt {
     display: none;
-
   }
 
   .request {
@@ -549,7 +554,6 @@ header {
     p {
       white-space: normal;
     }
-
   }
 
   .response {
@@ -584,18 +588,56 @@ header {
       line-height: 20px;
     }
 
-    >img {
+    > img {
       width: 40px;
     }
 
     div img {
       width: 60px;
     }
+  }
+  /* wr-jobs */
+  .jobs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0 100px 150px 100px;
+    gap: 100px;
+    > div p {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
 
+  .heating {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .cottage {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .plumbing {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .sewerage {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .boilerroom {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .floor {
+    grid-row: 4/5;
+    grid-column: 2/3;
   }
 }
-
-
 
 @media all and (max-width: 800px) {
   .wr-main header .tel {
@@ -609,7 +651,7 @@ header {
   }
 
   .request {
-    >span {
+    > span {
       display: none;
     }
 
@@ -623,7 +665,7 @@ header {
     padding: 0 20px;
     min-height: 200px;
 
-    >img {
+    > img {
       width: 20px;
     }
 
@@ -637,7 +679,17 @@ header {
       margin: 0 15px;
     }
   }
-
+  /* wr-jobs */
+  .jobs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0 50px 150px 50px;
+    gap: 50px;
+    > div p {
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
 }
 
 @media all and (max-width: 520px) {
@@ -672,7 +724,7 @@ header {
     max-width: 80%;
     padding: 0 0 90px 20px;
 
-    label:not([for=email]) {
+    label:not([for='email']) {
       margin-top: 10px;
     }
 
@@ -694,13 +746,57 @@ header {
     flex-direction: column;
     padding: 25px 25px;
 
-    >img {
+    > img {
       margin-bottom: 10px;
     }
   }
+  /* wr-jobs */
+  .jobs {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    padding: 0 50px 150px 50px;
+    gap: 50px;
+    > div p {
+      font-size: 17px;
+      line-height: 20px;
+      white-space: normal;
+    }
+  }
+  .boiler {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
 
+  .heating {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .cottage {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .plumbing {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+
+  .sewerage {
+    grid-row: 6/7;
+    grid-column: 1/2;
+  }
+
+  .boilerroom {
+    grid-row: 7/8;
+    grid-column: 1/2;
+  }
+
+  .floor {
+    grid-row: 8/9;
+    grid-column: 1/2;
+  }
 }
-
 
 @media all and (max-width: 390px) {
   .submit div {
@@ -718,5 +814,14 @@ header {
   .plumbery h1 {
     font-size: 28px;
     line-height: 28px;
+  }
+  /* wr-jobs */
+  .jobs {
+    padding: 0 30px 70px 30px;
+    gap: 20px;
+    > div p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
   }
 }
