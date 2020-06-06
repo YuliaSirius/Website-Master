@@ -122,7 +122,6 @@ header {
     font-weight: bold;
     font-size: 64px;
     color: #ffffff;
-    // margin-bottom: 20px;
     white-space: pre-line;
     line-height: 78px;
   }
@@ -314,6 +313,7 @@ header {
     font-size: 18px;
     line-height: 22px;
     color: #255d7d;
+    margin-right: 23px;
 
     span {
       color: #fba500;
@@ -471,6 +471,12 @@ header {
   .request {
     padding: 78px 0 114px 60px;
   }
+
+  /* wr-procedure */
+  .wr-procedure {
+    padding: 0 70px;
+
+  }
 }
 
 @media all and (max-width: 1250px) {
@@ -510,9 +516,8 @@ header {
     font-size: 22px;
     line-height: 30px;
   }
-}
 
-@media all and (max-width: 1250px) {
+
   .plumbery {
     display: block;
 
@@ -545,9 +550,6 @@ header {
       white-space: normal;
     }
 
-    // >span {
-    //   display: none;
-    // }
   }
 
   .response {
@@ -569,38 +571,76 @@ header {
   }
 
   .wr-main header .tel p {
-
     color: #fff;
   }
 
+  /* wr-procedure */
+  .wr-procedure {
+    padding: 0 50px;
+    min-height: 250px;
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    >img {
+      width: 40px;
+    }
+
+    div img {
+      width: 60px;
+    }
+
+  }
 }
 
 
+
 @media all and (max-width: 800px) {
-  .wr-main header .tel p {
-    display: none;
-  }
-
-  .request>span {
-    display: none;
-  }
-
-  .request p {
-    font-size: 26px;
-  }
-
   .wr-main header .tel {
     position: absolute;
     bottom: 5%;
     right: 10%;
+
+    p {
+      display: none;
+    }
   }
+
+  .request {
+    >span {
+      display: none;
+    }
+
+    p {
+      font-size: 26px;
+    }
+  }
+
+  /* wr-procedure */
+  .wr-procedure {
+    padding: 0 20px;
+    min-height: 200px;
+
+    >img {
+      width: 20px;
+    }
+
+    div img {
+      width: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 15px;
+      margin: 0 15px;
+    }
+  }
+
 }
 
 @media all and (max-width: 520px) {
-  .request {
-    max-width: 80%;
-  }
-
   .wr-main header {
     padding: 10 10px;
 
@@ -611,16 +651,15 @@ header {
         width: 90%;
       }
     }
-  }
 
-  .wr-main header nav ul {
+    nav ul {
+      li:nth-child(2) {
+        display: none;
+      }
 
-    li:nth-child(2) {
-      display: none;
-    }
-
-    li:nth-child(3) {
-      display: none;
+      li:nth-child(3) {
+        display: none;
+      }
     }
   }
 
@@ -629,26 +668,39 @@ header {
     margin: 0 0 20px 0;
   }
 
-  .request label:not([for=email]) {
-    margin-top: 10px;
-  }
+  .request {
+    max-width: 80%;
+    padding: 0 0 90px 20px;
 
-  .request form {
-    margin-top: 10px;
+    label:not([for=email]) {
+      margin-top: 10px;
+    }
+
+    form {
+      margin-top: 10px;
+    }
   }
 
   .submit {
     margin-top: 20px;
   }
 
-  .request {
-    padding: 0 0 90px 20px;
-  }
-
   .icons a:first-child {
     margin-right: 15px;
   }
+
+  /* wr-procedure */
+  .wr-procedure {
+    flex-direction: column;
+    padding: 25px 25px;
+
+    >img {
+      margin-bottom: 10px;
+    }
+  }
+
 }
+
 
 @media all and (max-width: 390px) {
   .submit div {

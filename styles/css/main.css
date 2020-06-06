@@ -268,6 +268,7 @@ header .tel a {
   font-size: 18px;
   line-height: 22px;
   color: #255d7d;
+  margin-right: 23px;
 }
 .wr-procedure p span {
   color: #fba500;
@@ -409,6 +410,11 @@ header .tel a {
   .request {
     padding: 78px 0 114px 60px;
   }
+
+  /* wr-procedure */
+  .wr-procedure {
+    padding: 0 70px;
+  }
 }
 @media all and (max-width: 1250px) {
   .plumbery h1 {
@@ -446,8 +452,7 @@ header .tel a {
     font-size: 22px;
     line-height: 30px;
   }
-}
-@media all and (max-width: 1250px) {
+
   .plumbery {
     display: block;
   }
@@ -499,8 +504,29 @@ header .tel a {
   .wr-main header .tel p {
     color: #fff;
   }
+
+  /* wr-procedure */
+  .wr-procedure {
+    padding: 0 50px;
+    min-height: 250px;
+  }
+  .wr-procedure p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .wr-procedure > img {
+    width: 40px;
+  }
+  .wr-procedure div img {
+    width: 60px;
+  }
 }
 @media all and (max-width: 800px) {
+  .wr-main header .tel {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+  }
   .wr-main header .tel p {
     display: none;
   }
@@ -508,22 +534,28 @@ header .tel a {
   .request > span {
     display: none;
   }
-
   .request p {
     font-size: 26px;
   }
 
-  .wr-main header .tel {
-    position: absolute;
-    bottom: 5%;
-    right: 10%;
+  /* wr-procedure */
+  .wr-procedure {
+    padding: 0 20px;
+    min-height: 200px;
+  }
+  .wr-procedure > img {
+    width: 20px;
+  }
+  .wr-procedure div img {
+    width: 30px;
+  }
+  .wr-procedure p {
+    font-size: 14px;
+    line-height: 15px;
+    margin: 0 15px;
   }
 }
 @media all and (max-width: 520px) {
-  .request {
-    max-width: 80%;
-  }
-
   .wr-main header {
     padding: 10 10px;
   }
@@ -533,7 +565,6 @@ header .tel a {
   .wr-main header .logo img {
     width: 90%;
   }
-
   .wr-main header nav ul li:nth-child(2) {
     display: none;
   }
@@ -546,10 +577,13 @@ header .tel a {
     margin: 0 0 20px 0;
   }
 
+  .request {
+    max-width: 80%;
+    padding: 0 0 90px 20px;
+  }
   .request label:not([for=email]) {
     margin-top: 10px;
   }
-
   .request form {
     margin-top: 10px;
   }
@@ -558,12 +592,17 @@ header .tel a {
     margin-top: 20px;
   }
 
-  .request {
-    padding: 0 0 90px 20px;
-  }
-
   .icons a:first-child {
     margin-right: 15px;
+  }
+
+  /* wr-procedure */
+  .wr-procedure {
+    flex-direction: column;
+    padding: 25px 25px;
+  }
+  .wr-procedure > img {
+    margin-bottom: 10px;
   }
 }
 @media all and (max-width: 390px) {
