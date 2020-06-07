@@ -40,11 +40,9 @@
 /* wr-main (секция на флексах)*/
 .wr-main {
   position: relative;
-  background: linear-gradient(
-      360deg,
+  background: linear-gradient(360deg,
       rgba(33, 54, 74, 0.76) 10.28%,
-      rgba(0, 0, 0, 0) 62.39%
-    ),
+      rgba(0, 0, 0, 0) 62.39%),
     url(../../img/bg_main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,6 +60,7 @@ header {
 
     ul {
       display: flex;
+
       li {
         margin-right: 34px;
       }
@@ -181,12 +180,12 @@ header {
 }
 
 .request {
-  padding: 78px 0 114px 146px;
+  padding: 78px 0 146px 115px;
   z-index: 20;
   max-width: 464px;
   width: 100%;
 
-  p {
+  >p {
     font-family: Circebold;
     font-size: 48px;
     color: #ffffff;
@@ -197,7 +196,7 @@ header {
     }
   }
 
-  > span {
+  >span {
     font-family: Circeregular;
     font-size: 20px;
     color: #ffffff;
@@ -210,16 +209,35 @@ header {
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 18px;
+    margin-top: 24px;
 
     input:not([type='submit']) {
       background: rgba(255, 255, 255, 0.4);
       box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.16);
-      // backdrop-filter: blur(16px);
       border-radius: 3px;
       border: none;
       height: 32px;
       margin-top: 8px;
+      font-family: Circeregular;
+      font-size: 14px;
+      line-height: 14px;
+      color: #FFFFFF;
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+
+    input::placeholder {
+      font-family: Circe;
+      font-size: 14px;
+      color: #C7C7C7;
+    }
+
+    textarea {
+      font-family: Circeregular;
+      font-size: 14px;
+      line-height: 14px;
+      color: #FFFFFF;
+      padding: 0 11px;
     }
   }
 
@@ -268,7 +286,11 @@ header {
     cursor: pointer;
   }
 
-  label {
+  p {
+    font-family: Circeregular;
+    font-size: 16px;
+    line-height: 16px;
+    color: #B1B1B1;
     text-align: end;
   }
 
@@ -298,7 +320,7 @@ header {
   justify-content: space-between;
   padding: 0 132px;
 
-  > img {
+  >img {
     padding-top: 10px;
   }
 
@@ -312,7 +334,6 @@ header {
     font-size: 18px;
     line-height: 22px;
     color: #255d7d;
-    margin-right: 23px;
 
     span {
       color: #fba500;
@@ -351,7 +372,7 @@ header {
     width: 100%;
   }
 
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,7 +385,7 @@ header {
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 100%;
+      min-height: 80px;
       background: linear-gradient(0deg, #3e7594, #3e7594), #c4c4c4;
     }
 
@@ -380,7 +401,7 @@ header {
     }
   }
 
-  > div:hover {
+  >div:hover {
     transform: scale(1.1);
   }
 }
@@ -424,13 +445,17 @@ header {
   grid-row: 2/3;
   grid-column: 4/5;
 }
+
 @media all and (max-width: 1900px) {
+
   /* wr-jobs */
   .jobs {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media all and (max-width: 1700px) {
+
   /* wr-main */
   .wr-main header {
     padding: 20px 10px;
@@ -446,6 +471,7 @@ header {
 }
 
 @media all and (max-width: 1500px) {
+
   /* wr-main */
   .wr-main {
     header {
@@ -480,7 +506,7 @@ header {
   }
 
   /* wr-jobs */
-  .jobs > div p {
+  .jobs>div p {
     border-left: none;
     padding-left: 0;
     margin: 10px 0;
@@ -488,40 +514,31 @@ header {
 }
 
 @media all and (max-width: 1250px) {
-  .plumbery h1 {
-    font-size: 42px;
-    line-height: 55px;
+  .response {
+    max-width: 100%;
+
+    .prompt {
+      display: none;
+
+      p {
+        font-size: 20px;
+        line-height: 22px;
+        padding-left: 10px;
+      }
+    }
   }
 
-  .response .prompt p {
-    font-size: 20px;
-    line-height: 22px;
-    padding-left: 10px;
-  }
+  .submit {
+    div a {
+      line-height: 16px;
+      margin-top: 0;
+    }
 
-  .request p {
-    font-size: 30px;
-  }
-
-  .request {
-    padding: 0 0 50px 50px;
-    max-width: 280px;
-  }
-
-  .submit input {
-    height: 40px;
-    font-size: 18px;
-    margin-right: 25px;
-  }
-
-  .submit div a {
-    line-height: 16px;
-    margin-top: 0;
-  }
-
-  .wr-main header .tel a {
-    font-size: 22px;
-    line-height: 30px;
+    input {
+      height: 40px;
+      font-size: 18px;
+      margin-right: 25px;
+    }
   }
 
   .plumbery {
@@ -535,29 +552,24 @@ header {
     }
   }
 
-  .wr-main header nav a {
-    font-size: 20px;
-  }
+  .wr-main header nav {
+    ul li {
+      margin-right: 15px;
+    }
 
-  .wr-main header nav ul li {
-    margin-right: 15px;
-  }
-
-  .response .prompt {
-    display: none;
+    a {
+      font-size: 20px;
+    }
   }
 
   .request {
     padding: 0 0 100px 50px;
     max-width: 50%;
 
-    p {
+    >p {
+      font-size: 30px;
       white-space: normal;
     }
-  }
-
-  .response {
-    max-width: 100%;
   }
 
   .wr-main::before {
@@ -574,8 +586,15 @@ header {
     margin: 0;
   }
 
-  .wr-main header .tel p {
-    color: #fff;
+  .wr-main header .tel {
+    p {
+      color: #fff;
+    }
+
+    a {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 
   /* wr-procedure */
@@ -588,7 +607,7 @@ header {
       line-height: 20px;
     }
 
-    > img {
+    >img {
       width: 40px;
     }
 
@@ -596,13 +615,15 @@ header {
       width: 60px;
     }
   }
+
   /* wr-jobs */
   .jobs {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     padding: 0 100px 150px 100px;
     gap: 100px;
-    > div p {
+
+    >div p {
       font-size: 20px;
       line-height: 22px;
     }
@@ -651,11 +672,11 @@ header {
   }
 
   .request {
-    > span {
+    >span {
       display: none;
     }
 
-    p {
+    >p {
       font-size: 26px;
     }
   }
@@ -665,7 +686,7 @@ header {
     padding: 0 20px;
     min-height: 200px;
 
-    > img {
+    >img {
       width: 20px;
     }
 
@@ -679,15 +700,23 @@ header {
       margin: 0 15px;
     }
   }
+
   /* wr-jobs */
   .jobs {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     padding: 0 50px 150px 50px;
     gap: 50px;
-    > div p {
-      font-size: 17px;
-      line-height: 20px;
+
+    >div {
+      div {
+        min-height: 50px;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 20px;
+      }
     }
   }
 }
@@ -746,22 +775,25 @@ header {
     flex-direction: column;
     padding: 25px 25px;
 
-    > img {
+    >img {
       margin-bottom: 10px;
     }
   }
+
   /* wr-jobs */
   .jobs {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 1fr);
     padding: 0 50px 150px 50px;
     gap: 50px;
-    > div p {
+
+    >div p {
       font-size: 17px;
       line-height: 20px;
       white-space: normal;
     }
   }
+
   .boiler {
     grid-row: 2/3;
     grid-column: 1/2;
@@ -815,11 +847,13 @@ header {
     font-size: 28px;
     line-height: 28px;
   }
+
   /* wr-jobs */
   .jobs {
     padding: 0 30px 70px 30px;
     gap: 20px;
-    > div p {
+
+    >div p {
       font-size: 16px;
       margin: 5px 0;
     }
